@@ -18,7 +18,8 @@ Este documento describe la visión del producto BudgetApp dentro del marco RUP p
 - Conversión del plan gratuito a planes de pago >=10 % en el primer año.
 
 ## 5. Problema y oportunidad
-Las personas, especialmente jóvenes profesionales, carecen de visibilidad sobre su salud financiera; llevan presupuestos “en la mente”, lo que impide ahorrar o planear. BudgetApp debe diagnosticar automáticamente la salud financiera durante el onboarding, orientar decisiones diarias y ofrecer alertas antes de exceder el presupuesto.
+Las personas, especialmente jóvenes profesionales, carecen de visibilidad sobre su salud financiera; llevan presupuestos “en la mente”, lo que impide ahorrar o planear.
+Adicionalmente, las personas que utilizan las aplicaciones solo pueden adaptarse a las opciones que brinda la aplicación siendo algunas muy dificiles de entender o tradicionales para las generaciones actuales. BudgetApp debe permitir al usuario llevar el registro de su presupuesto anual, mensual, sus gastos diarios y alertar cuando exceda su presupuesto. Debe permitir actualizar y revisar en graficos su situación actual. De permitirlo el usuario podría recibir un diagnostico de salud financiera de acuerdo a la informaicón registrada y recibir orientación de sus decisiones diarias.(BudgetApp debe diagnosticar automáticamente la salud financiera durante el onboarding, orientar decisiones diarias) y ofrecer alertas antes de exceder el presupuesto.
 
 ## 6. Usuarios y stakeholders
 - **Jóvenes profesionales**: ingresos variables o fijos, buscan control y alertas cuando sus gastos afectan metas.
@@ -28,7 +29,7 @@ Las personas, especialmente jóvenes profesionales, carecen de visibilidad sobre
 
 ## 7. Características clave (alto nivel)
 1. **Onboarding financiero**: cuestionario inicial que calcule salud financiera y ofrezca recomendaciones inmediatas.
-2. **Captura de transacciones**: manual y automática via integraciones bancarias; categorización asistida y reglas personalizadas.
+2. **Captura de transacciones**: manual (y automática via integraciones bancarias); categorización asistida y reglas personalizadas.
 3. **Presupuestos mensuales/anuales**: reflejan la lógica de la plantilla Excel, con dashboards web/móvil, metas y simuladores (“¿puedo permitírmelo?”).
 4. **Alertas en tiempo real**: notificaciones multicanal cuando se exceden límites o se registran movimientos relevantes.
 5. **Gestión de tarjetas y cuentas**: seguimiento de intereses, análisis de uso por tarjeta y sugerencias para optimizar deudas.
@@ -36,8 +37,12 @@ Las personas, especialmente jóvenes profesionales, carecen de visibilidad sobre
 
 ## 8. Diferenciadores competitivos
 - Disponibilidad simultánea en web y móvil, con experiencia consistente.
-- Integración bancaria desde el inicio + registro de tarjetas para análisis de intereses.
-- Motor de simulación previo a compras y alertas predictivas basadas en metas.
+- UI con gamificación para mostrar avances de las metas logradas y adquirir monedas que permiten cambiar el avatar o personalizarlo y agregar iconos propios para las metas.
+- limpieza y cierre de mes
+- Planeación anual
+- Planeación familiar y planeación de emprendimiento o negocio como valor premium
+- Motor de simulación para utilizar previo a compras y alertas predictivas basadas en metas.
+- Adaptable para importar información de presupuesto en archivo csv o xsl
 
 ## 9. Restricciones y supuestos
 - **Regulatorio**: la fase inicial depende de permisos para conectarnos a bancos colombianos, pero la arquitectura debe contemplar normativas internacionales (open banking, PSD2, etc.) para escalar.
@@ -46,9 +51,9 @@ Las personas, especialmente jóvenes profesionales, carecen de visibilidad sobre
 - **Monetización**: iniciar con plan gratuito y evolucionar hacia suscripciones; la capa familiar es premium.
 
 ## 10. Riesgos iniciales
-1. Obtención de permisos/regulaciones para conexiones bancarias en Colombia (posible necesidad de licencias fintech) y ajustes adicionales al expandir a otros países.
-2. Complejidad de mantener sincronización en tiempo real con múltiples bancos.
-3. Resistencia de usuarios a vincular cuentas bancarias (necesaria estrategia de confianza y seguridad).
+1. Usuarios que la gestión del dinero les genera incomodidad.
+2. No poder asociarse a un sponsor
+3. Plantilla de excel que no sea compatible con la aplicación
 
 ## 11. Cronograma preliminar (Incepción → Transición)
 - **Incepción**: documentación, visión, requisitos y plan inicial.
