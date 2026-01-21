@@ -5,12 +5,12 @@ Establecer el plan inicial del proyecto BudgetApp bajo metodología RUP, definie
 
 ## 2. Contexto de negocio y métricas
 - **Adopción**: necesitamos un crecimiento sostenido de usuarios (meta inicial: >15 % trimestral) impulsado por experiencia web + móvil desde el día uno.
-- **Integración bancaria**: la primera ola conectará bancos colombianos y permitirá registrar tarjetas locales, pero la arquitectura debe soportar rápidamente nuevas regiones.
+- **Gamificación**: Mapa de metas vs presupuesto  gasto. Incluye gamificación para uso de la app.
 - **Monetización**: partimos con plan gratuito individual y evolucionamos a planes de pago (familia/premium) una vez exista confianza y funcionalidades avanzadas (alertas, recomendaciones).
-- **Dolor que resolvemos**: salud financiera deficiente por falta de visibilidad; el onboarding debe diagnosticar la situación del usuario y mostrarle el costo de no presupuestar.
-- **Casos de uso críticos**: simulador “¿puedo permitírmelo?” previo a gastos discrecionales, alertas en tiempo real al superar límites, análisis por tarjeta con información de intereses.
+- **Dolor que resolvemos**: salud financiera deficiente por falta de visibilidad; falta de interés por gestionar las finanzas, tener claro el plan de ahorro a corto, mediano y largo plazo.
+- **Casos de uso críticos**: simulador “¿puedo permitírmelo?” previo a gastos discrecionales, alertas en tiempo real al superar límites, análisis por tarjeta con información de intereses. Que quiero hacer con el dinero que tengo, que debo hacer para cumplir mis metas.
 - **Segmentos**: jóvenes profesionales (primer target), familias/parejas con presupuestos combinados y freelancers con múltiples fuentes de ingreso.
-- **Riesgos pre-identificados**: posible obligación de constituirnos como fintech para operar en Colombia (y requisitos extra por país al expandir), además de restricciones regulatorias de datos personales y resistencia a compartir credenciales.
+- **Riesgos pre-identificados**: posible obligación de constituirnos como fintech para operar en Colombia (y requisitos extra por país al expandir), además de restricciones regulatorias de datos personales y resistencia a compartir credenciales. Realizar la aplicación para que la experiencia en dispositivos moviles sea la adecuada.
 
 ## 3. Resumen de Fases y Duración Tentativa
 | Fase RUP | Duración estimada | Hitos clave | Entregables principales |
@@ -94,11 +94,19 @@ Establecer el plan inicial del proyecto BudgetApp bajo metodología RUP, definie
 ## 11. Aprendizajes de la plantilla “Presupuesto 2025.xlsx”
 - **Hojas clave**: `Start Here` define moneda y saldo inicial; `Log` centraliza transacciones con columnas obligatorias (fecha, monto, categoría, subcategoría, detalles); cada mes (p. ej. `Noviembre`) replica un dashboard con KPIs por periodo.
 - **Modelo manual**: el usuario debe registrar ingresos/gastos y copiar los datos entre pestañas, lo que genera errores y carece de automatización (no hay importación bancaria ni alertas).
-- **Categorías y subcategorías**: existen agrupaciones como Income/Expenses y subniveles (Discresionales, Culitos, etc.), lo cual sirve como punto de partida para definir catálogos base, jerarquías y reglas de “roll-up”.
+- El usuario no puede definir en la plantilla en que banco o institución tiene el dinero ahorrado, invertido, a que banco o institución debe dinero y ttampoco define que dinero genera liquidez y cual no.
+- **Categorías y subcategorías**: existen agrupaciones como Ingresos/Gastos y subniveles, lo cual sirve como punto de partida para definir catálogos base, jerarquías y reglas de personalización.
 - **Cálculos esperados**: dashboards muestran fechas de inicio/fin, totales, y comparan presupuesto vs gasto real; esta lógica debe preservarse para garantizar paridad funcional con la plantilla.
 - **Oportunidades**: permitir importación masiva del histórico (`Log`), sincronizar presupuestos mensuales/anuales automáticamente y habilitar vistas familiares sin exponer datos personales.
+
 
 ## 12. Referentes de mercado y oportunidades de diferenciación
 - **YNAB (You Need a Budget)** – [Referencia](https://en.wikipedia.org/wiki/YNAB): plataforma web/móvil basada en método de sobres y asignación cero que refuerza reglas claras (da a cada peso una función, ahorra para emergencias, ajusta sobre la marcha). Nos inspira para construir un onboarding educativo, reglas configurables y simulaciones antes de gastar.
 - **Intuit Mint** – [Referencia](https://en.wikipedia.org/wiki/Intuit_Mint): agregador que conecta cuentas bancarias, tarjetas e inversiones para mostrar balances consolidados, presupuestos y metas. Refuerza la necesidad de integraciones financieras y dashboards unificados; además, la alerta de facturas y seguimiento de puntaje crediticio abre la puerta a notificaciones enriquecidas.
 - **Conclusiones**: los líderes combinan automatización, recomendaciones inteligentes y multicanalidad. BudgetApp debe mejorar esta ecuación con: alertas predictivas en tiempo real, simulador “¿puedo permitírmelo?” contextual, planes familiares colaborativos y una arquitectura multi-país que arranca en Colombia pero se adapta a nuevos mercados rápidamente.
+- - Muchas aplicaciones que prestan funcionalidades completas están en ingles
+- la introducción para iniciar no se puede saltar en algunas aplicaciones como Today's Budget deberia tenerse un inicio mas sencillo o demostrativo.
+- Mobills trabaja con publicidad y es solo inglés o portugues y las traducciones están incompletas al inglés
+- En Mobills para completar el registro obligan a llenar campos como el cumpleaños, las metas financieras, genero y telefono celular (datos innecesarios)
+- Budget tiene planes pagos desde un pago unico para acceso total hasta pago mensual. Incluyen trabajo colaborativo, reportes, libre de publicidad y uso de la IA. Tienen muchas clasificaciones en su menu.
+- El inciio del presupuesto para estas apps siempre es desde la aplicación. Como diferenciador se recomendaría hacerlo por web y tambien importar si se requiere desde una plantilla csv o xsl.
